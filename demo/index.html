@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Speech recognition | CoCreate</title>
+		<link rel="stylesheet" href="index.css" />
+		<link rel="stylesheet" href="../dist/CoCreate-speech-recognition.css" />
+	</head>
+	<body>
+		<main id="page-wrapper">
+			<h1>Speech recognition</h1>
+			<textarea id="transcript" rows="8" placeholder="Your transcript appears here"></textarea>
+			<button
+				type="button"
+				speech-recognition
+				speech-recognition-query="$document #transcript"
+				speech-recognition-lang="en-US"
+				speech-recognition-interim-results="true">
+				<i>●</i>
+				<i>■</i>
+				Start or stop listening
+			</button>
+		</main>
+		<script src="https://CoCreate.app/dist/CoCreate.js"></script>
+		<script src="../dist/CoCreate-speech-recognition.js"></script>
+	</body>
+</html>
