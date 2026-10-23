@@ -1,11 +1,14 @@
+[speech-recognition-query] i:last-child,
 [speech-recognition] i:last-child {
 	display: none;
 }
 
+[speech-recognition-query][speech-recognition-active="true"] i:first-child,
 [speech-recognition][speech-recognition-active="true"] i:first-child {
 	display: none;
 }
 
+[speech-recognition-query][speech-recognition-active="true"] i:last-child,
 [speech-recognition][speech-recognition-active="true"] i:last-child {
 	display: unset;
 }
