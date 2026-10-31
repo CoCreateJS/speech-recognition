@@ -13,7 +13,7 @@ Fork the [project on Github](https://github.com/CoCreate-app/CoCreate-speech-rec
 ```
 git speech-recognition https://github.com/contributor/CoCreate-speech-recognition.git
 cd CoCreate-speech-recognition
-git remote add upstream https://gitlab.com/cocreatejs/CoCreate-speech-recognition.git
+git remote add upstream https://github.com/cocreatejs/CoCreate-speech-recognition.git
 ```
 
 ## Create a Topic Branch
