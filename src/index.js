@@ -1,6 +1,6 @@
 /*!
- * https://cocreate.app
- * https://github.com/CoCreate-app/CoCreate-speech-recognition
+ * https://CoCreateJS.com
+ * https://github.com/CoCreateJS/CoCreate-speech-recognition
  * Released under the MIT license
  */
 import observer from "@cocreate/observer";
