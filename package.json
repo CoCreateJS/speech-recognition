@@ -20,53 +20,6 @@
   "publishConfig": {
     "access": "public"
   },
-  "cocreate": {
-    "environment": [
-      "client"
-    ],
-    "interface": {
-      "schemaVersion": 1,
-      "summary": "Declarative speech-to-text for CoCreate using the browser SpeechRecognition API.",
-      "source": "src/index.js",
-      "declarative": {
-        "selectors": [
-          "[speech-recognition-query], [speech-recognition]"
-        ],
-        "attributes": [
-          {
-            "name": "actions"
-          },
-          {
-            "name": "aria-disabled"
-          },
-          {
-            "name": "speech-recognition"
-          },
-          {
-            "name": "speech-recognition-active"
-          },
-          {
-            "name": "speech-recognition-alternatives"
-          },
-          {
-            "name": "speech-recognition-lang"
-          },
-          {
-            "name": "speech-recognition-query"
-          }
-        ]
-      },
-      "api": {
-        "exports": [
-          "abort",
-          "init",
-          "start",
-          "stop",
-          "toggle"
-        ]
-      }
-    }
-  },
   "scripts": {
     "start": "webpack --config webpack.config.js",
     "build": "webpack --mode=production --config webpack.config.js",

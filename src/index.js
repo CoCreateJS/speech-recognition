@@ -67,6 +67,11 @@ function getOptions(element) {
 	};
 }
 
+/**
+ *
+ * @public
+ * @environment client
+ */
 function start(options = {}, element) {
 	if (options.nodeType) {
 		element = options;
@@ -162,6 +167,11 @@ function start(options = {}, element) {
 	}
 }
 
+/**
+ *
+ * @public
+ * @environment client
+ */
 function stop() {
 	if (!session || session.ended || session.cancelled || session.stopping) return;
 	session.recognition.stop();
@@ -172,6 +182,11 @@ function stop() {
 	}
 }
 
+/**
+ *
+ * @public
+ * @environment client
+ */
 function abort() {
 	if (!session || session.cancelled) return;
 	const current = session;
@@ -185,6 +200,11 @@ function abort() {
 	});
 }
 
+/**
+ *
+ * @public
+ * @environment client
+ */
 function toggle(element) {
 	if (session?.element === element && !session.ended && !session.cancelled) return stop();
 	return start(element);
@@ -200,6 +220,11 @@ function applyCommand(element) {
 	else if (ownsSession && command === "abort") abort();
 }
 
+/**
+ *
+ * @public
+ * @environment client
+ */
 function init(elements = document.querySelectorAll(selector)) {
 	if (elements.nodeType) elements = [elements];
 	for (const element of elements) {
@@ -317,3 +342,81 @@ observer.init({
 init();
 
 export default { init, start, stop, abort, toggle };
+
+/**
+ *
+ * @name actions
+ * @kind member
+ * @attribute
+ * @environment client
+ */
+
+/**
+ *
+ * @name aria-disabled
+ * @kind member
+ * @attribute
+ * @environment client
+ */
+
+/**
+ *
+ * @name speech-recognition
+ * @kind member
+ * @attribute
+ * @environment client
+ */
+
+/**
+ *
+ * @name speech-recognition-active
+ * @kind member
+ * @attribute
+ * @environment client
+ */
+
+/**
+ *
+ * @name speech-recognition-alternatives
+ * @kind member
+ * @attribute
+ * @environment client
+ */
+
+/**
+ *
+ * @name speech-recognition-lang
+ * @kind member
+ * @attribute
+ * @environment client
+ */
+
+/**
+ *
+ * @name speech-recognition-query
+ * @kind member
+ * @attribute
+ * @environment client
+ */
+
+/**
+ * Declarative speech-to-text for CoCreate using the browser SpeechRecognition API.
+ *
+ * @module speech-recognition
+ * @environment client
+ */
+
+/**
+ * Declarative selectors recognized by this module.
+ *
+ * @name declarative-selectors
+ * @kind member
+ * @selectors
+ * @environment client
+ * @example
+ * ```json
+ * [
+ *   "[speech-recognition-query], [speech-recognition]"
+ * ]
+ * ```
+ */
